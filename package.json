@@ -1,0 +1,23 @@
+{
+  "name": "heckler",
+  "version": "0.1.0",
+  "description": "General purpose notification engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slickage/heckler.git"
+  },
+  "author": "James Wang <jw@slickage.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slickage/heckler/issues"
+  },
+  "homepage": "https://github.com/slickage/heckler",
+  "dependencies": {
+    "nodemailer": "^0.6.1",
+    "restify": "^2.6.3"
+  }
+}
