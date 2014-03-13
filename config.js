@@ -9,5 +9,9 @@ module.exports = {
     port: Number(process.env.SMTP_PORT) || 465,
     user: process.env.SMTP_USER || 'smtpuser',
     pass: process.env.SMTP_PASS || 'smtppass'
+  },
+  twilio: {
+    accountSid: process.env.TWILIO_ACCOUNT_SID || '',
+    authToken: process.env.TWILIO_AUTH_TOKEN || ''
   }
 };

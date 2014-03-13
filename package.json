@@ -18,6 +18,7 @@
   "homepage": "https://github.com/slickage/heckler",
   "dependencies": {
     "nodemailer": "^0.6.1",
-    "restify": "^2.6.3"
+    "restify": "^2.6.3",
+    "twilio": "^1.6.0"
   }
 }
