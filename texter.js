@@ -1,9 +1,9 @@
 var twilio = require('twilio');
 var config = require('./config');
-var client = new twilio.RestClient(config.twilio.accountSid, config.twilio.authToken);
 
 module.exports = {
   text: function(toNumber, body, cb) {
+    client = new twilio.RestClient(config.twilio.accountSid, config.twilio.authToken);
     client.sms.messages.create({
       to: toNumber,
       from: '+18086703294',
