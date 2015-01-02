@@ -1,15 +1,18 @@
 var nodemailer = require('nodemailer');
 var ses = require('nodemailer-ses-transport');
 var config = require('./config');
-var transport = nodemailer.createTransport(ses({
-  accessKeyId: config.ses.id,
-  secretAccessKey: config.ses.key,
-  region: config.ses.region
-}));
+var smtpTransport = nodemailer.createTransport('SMTP',{
+  host: config.smtp.host,
+  secureConnection: true, // use SSL
+  port: config.smtp.port,
+  auth: {
+    user: config.smtp.user,
+    pass: config.smtp.pass
+  }
+});
 
 module.exports = {
   email: function(email, cb) {
-    transport.sendMail(email, cb);
+    smtpTransport.sendMail(email, cb);
   }
 }
-
