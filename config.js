@@ -10,6 +10,11 @@ module.exports = {
     user: process.env.SMTP_USER || 'smtpuser',
     pass: process.env.SMTP_PASS || 'smtppass'
   },
+  ses: {
+    id: process.env.SES_ID || '',
+    key: process.env.SES_KEY || '',
+    region: process.env.SES_REGION || 'us-west-2'
+  },
   twilio: {
     accountSid: process.env.TWILIO_ACCOUNT_SID || '',
     authToken: process.env.TWILIO_AUTH_TOKEN || ''
